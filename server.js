@@ -81,7 +81,9 @@ const dist_libs = [
     { "route": "/dist/css", "path": "highcharts-7.2.0/code/css" },
     { "route": "/dist/js", "path": "highcharts-7.2.0/code" },
     /* interact.js */
-    { "route": "/dist/js", "path": "interactjs-1.6.2" }
+    { "route": "/dist/js", "path": "interactjs-1.6.2" },
+    /* gifler */
+    { "route": "/dist", "path": "gifler-0.3.0" }
 ];
 
 function dist_lib(app, exportRoute, localPath) {
