@@ -76,7 +76,10 @@ const dist_libs = [
     /* fabricjs */
     { "route": "/dist", "path": "fabricjs-3.4.0" },
     /* gifuct */
-    { "route": "/dist", "path": "gifuct-js-1.0.0" }
+    { "route": "/dist", "path": "gifuct-js-1.0.0" },
+    /* highcharts */
+    { "route": "/dist/css", "path": "highcharts-7.2.0/code/css" },
+    { "route": "/dist/js", "path": "highcharts-7.2.0/code" }
 ];
 
 function dist_lib(app, exportRoute, localPath) {
