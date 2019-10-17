@@ -83,7 +83,10 @@ const dist_libs = [
     /* interact.js */
     { "route": "/dist/js", "path": "interactjs-1.6.2" },
     /* gifler */
-    { "route": "/dist", "path": "gifler-0.3.0" }
+    { "route": "/dist", "path": "gifler-0.3.0" },
+    /* videojs */
+    { "route": "/dist/css", "path": "videojs-7.6.5" },
+    { "route": "/dist/js", "path": "videojs-7.6.5" }
 ];
 
 function dist_lib(app, exportRoute, localPath) {
