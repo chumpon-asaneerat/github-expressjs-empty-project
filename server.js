@@ -86,7 +86,10 @@ const dist_libs = [
     { "route": "/dist", "path": "gifler-0.3.0" },
     /* videojs */
     { "route": "/dist/css", "path": "videojs-7.6.5" },
-    { "route": "/dist/js", "path": "videojs-7.6.5" }
+    { "route": "/dist/js", "path": "videojs-7.6.5" },
+    /* jquery-easyui */
+    { "route": "/dist/css", "path": "jquery-easyui-1.8.7" },
+    { "route": "/dist/js", "path": "jquery-easyui-1.8.7" }
 ];
 
 function dist_lib(app, exportRoute, localPath) {
