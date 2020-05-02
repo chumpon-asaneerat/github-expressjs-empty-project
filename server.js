@@ -91,7 +91,9 @@ const dist_libs = [
     { "route": "/dist/js", "path": "videojs-7.6.5" },
     /* jquery-easyui */
     { "route": "/dist/css", "path": "jquery-easyui-1.8.7" },
-    { "route": "/dist/js", "path": "jquery-easyui-1.8.7" }
+    { "route": "/dist/js", "path": "jquery-easyui-1.8.7" },
+    /* signature pad */
+    { "route": "/dist/js", "path": "signature-pad-3.0.0.beta.3" }
 ];
 
 function dist_lib(app, exportRoute, localPath) {
