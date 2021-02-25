@@ -47,6 +47,13 @@ const logger = createLogger({
     ]        
 })
 
+logger.stream = {
+    write: function(message, encoding) {
+        // morgan always has newline so remove it before send to log.
+        logger.info(message.substring(0,message.lastIndexOf('\n')));
+    }
+}
+
 //#endregion
 
 const APPNAME = "Express Project";
@@ -55,7 +62,8 @@ const PORT = 3000;
 const app = express();
 
 app.use(helmet());
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
+app.use(morgan('short', { stream: logger.stream }));
 
 app.use(cookieparser("YOUR_SECURE_KEY@123"));
 
