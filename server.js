@@ -6,18 +6,7 @@ const bodyparser = require("body-parser");
 const cookieparser = require("cookie-parser");
 const favicon = require("serve-favicon");
 
-const APPNAME = "Express Project";
-const PORT = 3000;
-
-const app = express();
-
-app.use(helmet());
-app.use(morgan("dev"));
-
-app.use(cookieparser("YOUR_SECURE_KEY@123"));
-
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ extended: true }));
+//#region Logger
 
 const winston = require('winston');
 const { createLogger, format, transports } = require('winston');
@@ -56,6 +45,21 @@ const logger = createLogger({
         new DailyRotateFile(log_file_opts)
     ]        
 })
+
+//#endregion
+
+const APPNAME = "Express Project";
+const PORT = 3000;
+
+const app = express();
+
+app.use(helmet());
+app.use(morgan("dev"));
+
+app.use(cookieparser("YOUR_SECURE_KEY@123"));
+
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
 
 const iconpath = path.join(__dirname, "public", "favicon.ico");
 app.use(favicon(iconpath));
@@ -157,7 +161,6 @@ app.all("/", (req, res) => {
 
     res.send(`It's work!!`);
 });
-
 app.get("/:file", (req, res) => {
     if (req.params.file === 'index.html') {
         res.sendFile(path.join(__dirname, req.params.file));
